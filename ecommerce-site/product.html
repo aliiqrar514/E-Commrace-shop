@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Store - Product Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">E-Shop</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex me-3">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"
+                ><i class="fas fa-shopping-cart"></i> Cart (<span id="cartCount"
+                  >0</span
+                >)</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Details Content -->
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <img
+            id="productImage"
+            src=""
+            alt="Product Image"
+            class="img-fluid rounded"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h1 id="productName"></h1>
+          <div class="mb-3">
+            <span id="productRating" class="rating"></span>
+            <span id="productRatingText"></span>
+          </div>
+          <div class="mb-3">
+            <span id="productPrice" class="h3 text-primary"></span>
+            <span
+              id="productOriginalPrice"
+              class="text-muted text-decoration-line-through ms-2"
+            ></span>
+            <span id="productDiscount" class="badge bg-danger ms-2"></span>
+          </div>
+          <p id="productDescription" class="lead"></p>
+
+          <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <div class="input-group" style="width: 150px">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                onclick="changeQuantity(-1)"
+              >
+                -
+              </button>
+              <input
+                type="number"
+                class="form-control text-center"
+                id="quantity"
+                value="1"
+                min="1"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                onclick="changeQuantity(1)"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <button class="btn btn-primary btn-lg me-2" onclick="addToCart()">
+              Add to Cart
+            </button>
+            <button
+              class="btn btn-outline-primary btn-lg"
+              onclick="addToWishlist()"
+            >
+              <i class="fas fa-heart"></i> Add to Wishlist
+            </button>
+          </div>
+
+          <div class="mb-3">
+            <h5>Product Details</h5>
+            <ul id="productDetails" class="list-unstyled">
+              <!-- Product details will be loaded here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <div class="mt-5">
+        <h3>Related Products</h3>
+        <div class="row" id="relatedProducts">
+          <!-- Related products will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>E-Shop</h5>
+            <p>Your one-stop online store for quality products.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="about.html" class="text-light">About Us</a></li>
+              <li><a href="contact.html" class="text-light">Contact</a></li>
+              <li><a href="#" class="text-light">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact Info</h5>
+            <p>Email: info@eshop.com<br />Phone: +92 308 2248254</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/your-fontawesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+    <script src="js/product.js"></script>
+  </body>
+</html>

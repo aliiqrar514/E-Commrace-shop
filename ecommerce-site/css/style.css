@@ -1,0 +1,86 @@
+/* Custom Styles for E-Commerce Website */
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: #667eea;
+  border-color: #667eea;
+}
+
+.btn-primary:hover {
+  background-color: #5a6fd8;
+  border-color: #5a6fd8;
+}
+
+.footer {
+  background-color: #343a40;
+}
+
+.rating {
+  color: #ffc107;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #dc3545;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.cart-item {
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 0;
+}
+
+.cart-total {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
